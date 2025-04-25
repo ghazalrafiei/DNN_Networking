@@ -153,7 +153,7 @@ def evaluate(model, dataloader, device):
     plt.title("Reconstruction Error Distribution")
     plt.savefig("reconstruction_error.png")
     print("Saved reconstruction error histogram to reconstruction_error.png")
-
+    plt.close()
 
 def plot_loss(train_losses, val_losses):
     plt.figure(figsize=(8, 5))
@@ -163,7 +163,8 @@ def plot_loss(train_losses, val_losses):
     plt.ylabel("Loss")
     plt.legend()
     plt.title("Loss Curve")
-    plt.show()
+    plt.savefig("loss_curve.png")
+    plt.close()
 
 def analyze_reconstruction_errors(model, X, features_df, device):
     # X = features_df.drop(columns=["domain"]).to_numpy(dtype=np.float32)
@@ -205,7 +206,8 @@ def analyze_reconstruction_errors(model, X, features_df, device):
     plt.xlabel("PC1")
     plt.ylabel("PC2")
     plt.tight_layout()
-    plt.show()
+    plt.savefig("latent_space_pca.png")
+    plt.close()
 
 def main():
     parser = argparse.ArgumentParser()
