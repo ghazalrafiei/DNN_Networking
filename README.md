@@ -8,6 +8,6 @@ Read more here: [https://github.com/KimiNewt/pyshark?tab=readme-ov-file#usage](h
 To run on slurm:
 
 Modfify or recreate a file like run_data_preprocess.slurm
-Run command ./>  run_transformer.slurm run_timestamp_transformer.slurm
+Run command ./>  sbatch run_data_preprocess.slurm
 Monitor the job in logs/<job ID>.err file
 
